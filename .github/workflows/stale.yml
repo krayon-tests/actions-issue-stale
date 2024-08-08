@@ -30,6 +30,6 @@ jobs:
           stale-pr-label: 'stale'
           stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity.\nIt will be closed in 1 day if no further activity occurs.\nThank you for your contributions.\n\nIf you think this pull request should stay open, please remove the https://github.com/krayon-tests/issue-stale/labels/stale label or comment below. You can also add the label https://github.com/krayon-tests/issue-stale/labels/never-stale to avoid this in future."
           remove-stale-when-updated: true
-          labels-to-remove-when-unstale: 'stale 🤖'
+          labels-to-remove-when-unstale: 'stale'
           delete-branch: true
           operations-per-run: 500
