@@ -16,10 +16,10 @@ jobs:
       issues: write
       pull-requests: write
     env:
-      - stale_issue_label: 'stale'
-      - stale_pr_label: 'stale'
-      - exempt_issue_labels: 'never-stale'
-      - exempt_pr_labels: 'never-stale'
+      stale_issue_label: 'stale'
+      stale_pr_label: 'stale'
+      exempt_issue_labels: 'never-stale'
+      exempt_pr_labels: 'never-stale'
     steps:
       - name: actions/stale
         uses: actions/stale@1160a2240286f5da8ec72b1c0816ce2481aabf84
