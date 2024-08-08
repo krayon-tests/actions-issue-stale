@@ -26,7 +26,7 @@ jobs:
           exempt-issue-labels: 'never-stale'
           exempt-pr-labels: 'never-stale'
           stale-issue-label: 'stale'
-          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity.\nIt will be closed in 1 day if no further activity occurs.\nThank you for your contributions.\n\nIf you think this issue should stay open, please remove the ${{GITHUB_SERVER_URL}}/${{GITHUB_REPOSITORY}}/labels/stale label or comment below. You can also add the label https://github.com/krayon-tests/issue-stale/labels/never-stale to avoid this in future."
+          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity.\nIt will be closed in 1 day if no further activity occurs.\nThank you for your contributions.\n\nIf you think this issue should stay open, please remove the ${{vars.GITHUB_SERVER_URL}}/${{vars.GITHUB_REPOSITORY}}/labels/stale label or comment below. You can also add the label https://github.com/krayon-tests/issue-stale/labels/never-stale to avoid this in future."
           stale-pr-label: 'stale'
           stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity.\nIt will be closed in 1 day if no further activity occurs.\nThank you for your contributions.\n\nIf you think this pull request should stay open, please remove the https://github.com/krayon-tests/issue-stale/labels/stale label or comment below. You can also add the label https://github.com/krayon-tests/issue-stale/labels/never-stale to avoid this in future."
           remove-stale-when-updated: true
