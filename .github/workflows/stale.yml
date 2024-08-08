@@ -1,0 +1,33 @@
+name: 'stale[bot]'
+
+on:
+  schedule:
+    # every minute
+    - cron: '* * * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: actions/stale
+        uses: actions/stale@1160a2240286f5da8ec72b1c0816ce2481aabf84
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 0
+          days-before-close: 1
+          exempt-issue-labels: 'never-stale'
+          exempt-pr-labels: 'never-stale'
+          stale-issue-label: 'stale'
+          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity.\nIt will be closed in 1 day if no further activity occurs.\nThank you for your contributions.\n\nIf you think this issue should stay open, please remove the https://github.com/krayon-tests/issue-stale/labels/stale label or comment below. You can also add the label https://github.com/krayon-tests/issue-stale/labels/never-stale to avoid this in future."
+          stale-pr-label: 'stale 🤖'
+          stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity.\nIt will be closed in 1 day if no further activity occurs.\nThank you for your contributions.\n\nIf you think this pull request should stay open, please remove the https://github.com/krayon-tests/issue-stale/labels/stale label or comment below. You can also add the label https://github.com/krayon-tests/issue-stale/labels/never-stale to avoid this in future."
+          remove-stale-when-updated: true
+          labels-to-remove-when-unstale: 'stale 🤖'
+          delete-branch: true
+          operations-per-run: 500
