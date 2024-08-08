@@ -24,7 +24,7 @@ jobs:
       exempt_pr_label: 'never-stale'
     steps:
       - name: actions/stale
-        uses: actions/stale@1160a2240286f5da8ec72b1c0816ce2481aabf84
+        uses: actions/stale@3f3b0175e8c66fb49b9a6d5a0cd1f8436d4c3ab6
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: ${{ env.days_before_stale }}
@@ -32,9 +32,9 @@ jobs:
           exempt-issue-labels: ${{ env.exempt_issue_label }}
           exempt-pr-labels: ${{ env.exempt_pr_label }}
           stale-issue-label: ${{ env.stale_issue_label }}
-          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity.\nIt will be closed in ${{ env.days_before_close }} day(s) if no further activity occurs.\nThank you for your contributions.\n\nIf you think this issue should stay open, please remove the ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.stale_issue_label }} label or comment below. You can also add the label ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.exempt_issue_label }} to excempt this issue from being marked as stale."
+          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity.\nIt will be closed in ${{ env.days_before_close }} day(s) if no further activity occurs.\nThank you for your contributions.\n\nIf you think this issue should stay open, please remove the ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.stale_issue_label }} label or comment below. You can also add the label ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.exempt_issue_label }} to exempt this issue from being marked as stale."
           stale-pr-label: ${{ env.stale_pr_label }}
-          stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity.\nIt will be closed in ${{ env.days_before_close }} day(s) if no further activity occurs.\nThank you for your contributions.\n\nIf you think this pull request should stay open, please remove the ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.stale_pr_label }} label or comment below. You can also add the label ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.exempt_pr_label }} to excempt this pull request from being marked as stale."
+          stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity.\nIt will be closed in ${{ env.days_before_close }} day(s) if no further activity occurs.\nThank you for your contributions.\n\nIf you think this pull request should stay open, please remove the ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.stale_pr_label }} label or comment below. You can also add the label ${{ github.server_url }}/${{ github.repository }}/labels/${{ env.exempt_pr_label }} to exempt this pull request from being marked as stale."
           remove-stale-when-updated: true
           labels-to-remove-when-unstale: ${{ env.stale_issue_label }} ${{ env.stale_pr_label }}
           delete-branch: true
